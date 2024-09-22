@@ -8,8 +8,8 @@ def run_script():
     script_dir = os.path.dirname(os.path.abspath(__file__))
 
     # Define the script paths relative to the current script's directory
-    windows_script = os.path.join(script_dir, "script.bat")
-    linux_script = os.path.join(script_dir, "remove_video_background.sh")
+    windows_script = os.path.join(script_dir, "scripts/script.bat")
+    linux_script = os.path.join(script_dir, "scripts/remove_video_background.sh")
 
     # Check the current OS
     current_os = platform.system()
