@@ -10,7 +10,7 @@ def run_script():
     args = parser.parse_args()
 
     input_file = args.input_file
-    windows_script = os.path.join("scripts", "windows_remove_video_background.bat")
+    windows_script = "windows_remove_video_background.bat"
     linux_script = os.path.join("scripts/remove_video_background.sh")
 
     # Check the current OS
