@@ -5,11 +5,14 @@ import subprocess
 
 def run_script():
     # Get the directory of the current script
-    script_dir = os.path.dirname(os.path.abspath(__file__))
+    # script_dir = os.path.dirname(os.path.abspath(__file__))
+    # script_dir = pkg_resources.resource_filename(__name__, "scripts")
+    # print(script_dir)
 
     # Define the script paths relative to the current script's directory
-    windows_script = os.path.join(script_dir, "scripts/script.bat")
-    linux_script = os.path.join(script_dir, "scripts/remove_video_background.sh")
+    windows_script = os.path.join("scripts/remove_video_background.sh")
+    # os.path.join(script_dir, "script.bat")
+    linux_script = os.path.join("scripts/remove_video_background.sh")
 
     # Check the current OS
     current_os = platform.system()
