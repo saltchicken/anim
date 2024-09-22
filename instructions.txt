@@ -1,0 +1,7 @@
+INPUT_VIDEO="test.mkv"
+
+
+mkdir frames
+ffmpeg -i ${INPUT_VIDEO} -rate 15 -q:v 2 frames/frame_%04d.png
+rembg p ${INPUT_FOLDER} ${OUTPUT_FOLDER}
+ffmpeg -framerate 15 -i "$OUTPUT_FOLDER/frame_%04d.png" -c:v ffv1 -pix_fmt yuva420p -f matroska ${OUTPUT_FILE}
