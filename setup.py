@@ -8,6 +8,7 @@ setup(
     data_files=[
         ("scripts", ["scripts/remove_video_background.sh"]),
         ("scripts", ["scripts/windows_remove_video_background.bat"]),
+        ("scripts", ["scripts/boomerang.bat"]),
     ],
     entry_points={
         "console_scripts": [
