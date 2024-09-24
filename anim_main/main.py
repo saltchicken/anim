@@ -6,7 +6,10 @@ import argparse
 
 def run_script():
     parser = argparse.ArgumentParser(description="Anim Main")
-    parser.add_argument("input_file", help="Path to the input file")
+    parser.add_argument("-i", "--input_file", help="Path to the input file")
+    parser.add_argument(
+        "-b", "--boomerang", action="store_true", help="Make video file a boomerang"
+    )
     args = parser.parse_args()
 
     input_file = args.input_file
@@ -35,12 +38,8 @@ def run_script():
         print(f"Error occurred while running the script: {e}")
 
 
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Anim Main")
-    parser.add_argument("-i", "--input_file", help="Path to the input file")
-    parser.add_argument(
-        "-b", "--boomerang", action="store_true", help="Make video file a boomerang"
-    )
-    args = parser.parse_args()
-
-    # run_script(args)
+# if __name__ == "__main__":
+#     parser = argparse.ArgumentParser(description="Anim Main")
+#     args = parser.parse_args()
+#
+#     # run_script(args)
